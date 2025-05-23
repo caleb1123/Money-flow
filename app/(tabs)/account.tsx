@@ -2,11 +2,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Button, Text, View } from 'react-native';
-
+import "../../global.css"; // Đảm bảo global.css đã được cấu hình đúng
 
 export default function AccountScreen() {
   const router = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // 👈 mặc định là false
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   useEffect(() => {
     const checkLogin = async () => {
@@ -21,7 +21,7 @@ export default function AccountScreen() {
 
   if (!isLoggedIn) {
     return (
-      <View className="flex-1 justify-center items-center text-slate-100">
+      <View className="flex-1 justify-center items-center text-slate-100 bg-red-300">
         <Text className="text-xl mb-4">You are not logged in</Text>
         <Button title="Login" onPress={() => router.push('/login/login')} />
       </View>
