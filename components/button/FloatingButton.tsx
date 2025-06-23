@@ -1,10 +1,11 @@
 import { Plus } from 'lucide-react-native';
 import React from 'react';
-import { Platform, TouchableOpacity } from 'react-native';
+import { Platform, StyleProp, TouchableOpacity, ViewStyle } from 'react-native';
 import "../../global.css"; // Đảm bảo Tailwind CSS đã được cấu hình đúng
 interface FloatingButtonProps {
   onPress: () => void;
   className?: string; // Thêm prop để override className nếu cần
+  style?: StyleProp<ViewStyle>;
 }
 
 export function FloatingButton({ onPress, className }: FloatingButtonProps) {

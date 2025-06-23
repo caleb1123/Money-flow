@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { Alert, Button, Text, TextInput, View } from 'react-native';
 import { login } from '../../api/AuthenAPI'; // Import hàm login từ AuthenAPI.js
-import "../../global.css"; // Đảm bảo global.css đã được cấu hình đúng
 
 export default function App() {
   const [username, setUsername] = useState('');
