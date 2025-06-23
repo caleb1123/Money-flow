@@ -51,25 +51,25 @@ export default function TabLayout() {
           options={{
             title: 'Transaction',
             tabBarIcon: ({ color }) => (
-              <Wallet size={28} color={color} style={{ marginRight: 12 }} />
+              <Wallet size={28} color={color} />
             ),
           }}
         />
 
         {/* Spacer để FloatingButton ở giữa */}
         <Tabs.Screen
-  name="spacer"
-  options={{
-    tabBarButton: () => null, // ẩn tab spacer
-  }}
-/>
+          name="spacer"
+          options={{
+            tabBarButton: () => null, // ẩn tab spacer
+          }}
+        />
 
         <Tabs.Screen
           name="goals"
           options={{
             title: 'Goals',
             tabBarIcon: ({ color }) => (
-              <Goal size={28} color={color} style={{ marginLeft: 12 }} />
+              <Goal size={28} color={color} />
             ),
           }}
         />
